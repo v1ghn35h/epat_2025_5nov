@@ -22,3 +22,4 @@ ENV SERVER_PORT=8085
 EXPOSE ${SERVER_PORT}
 
 CMD ["java", "-jar", "d13revision-0.0.1-SNAPSHOT.jar"]
+
