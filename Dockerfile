@@ -1,5 +1,5 @@
 # first stage
-FROM openjdk:11-ea-11-slim AS builder
+FROM openjdk:11-ea-11-jre-sid AS builder
 
 WORKDIR /app
 
@@ -11,7 +11,7 @@ COPY pom.xml .
 RUN ./mvnw package -DskipTests=true
 
 # second stage
-FROM openjdk:11-ea-11-slim
+FROM openjdk:11-ea-11-jre-sid
 
 WORKDIR /runningapp
 
